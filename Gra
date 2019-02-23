@@ -1,0 +1,30 @@
+#include <iostream>
+#include <windows.h>
+#include <time.h>
+#include <stdio.h>
+using namespace std;
+int liczba, strzal, ile_prob;
+
+int main()
+{
+    cout << "Witaj! Pomyslalem sobie o pewnej liczbie z zakresu 1..50" << endl;
+    srand(time(NULL));
+    liczba = rand()%50+1;
+
+
+    while(liczba != strzal)
+    {
+        ile_prob++;
+        cout << "Zobaczymy czy zgadniesz te liczbe(To Twoja " <<ile_prob<<" proba):";
+        cin>>strzal;
+
+        if(liczba == strzal)
+            cout << "Udalo sie! W "<<ile_prob<<" probie"<<endl;
+        else if(liczba>strzal)
+            cout << "To za malo"<<endl;
+        else if(liczba<strzal)
+            cout << "To za duzo"<<endl;
+    }
+    system("pause");
+    return 0;
+}
